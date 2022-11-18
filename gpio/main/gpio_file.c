@@ -19,6 +19,9 @@
 #include "esp_log.h"
 #include "esp_system.h"
 
+#define FALSE 0
+#define TRUE 1
+
 static const char *TAG = "main";
 
 /**
@@ -41,6 +44,64 @@ static const char *TAG = "main";
 #define GPIO_INPUT_IO_0     0
 #define GPIO_INPUT_PIN_SEL  (1ULL<<GPIO_INPUT_IO_0) 
 
+
+
+
+bool button_press()
+{
+    if (gpio_get_level(GPIO_INPUT_IO_0))
+    {
+        return TRUE;
+    }
+    return FALSE;
+    
+}
+
+void turn_LED_on()
+{
+    gpio_set_level(GPIO_OUTPUT_IO_0, 1);
+}
+
+void turn_LED_off()
+{
+    gpio_set_level(GPIO_OUTPUT_IO_0, 0);
+}
+
+
+
+int ret_les_ten(int blink_count)
+{
+    blink_count = blink_count % 10;
+    return blink_count;
+}
+
+void active_delay()
+{
+    printf("Waiting ! \n");
+    for(int j=0;j<10000000;j++)
+    {
+        if(j%1000000==0)
+        {
+            printf(".");
+        }
+    }
+}
+
+void blink_LED(blink_count)
+{
+    blink_count = ret_les_ten(blink_count);
+    printf("LED is going to blink \n");
+    printf(blink_count);
+    printf("   times.");
+    for(int i=0;i<blink_count;i++)
+    {
+        turn_LED_off();
+        active_delay();
+        turn_LED_on();
+        active_delay();
+
+    }
+}
 
 void app_main(void)
 {
@@ -79,61 +140,5 @@ void app_main(void)
 
         blink_LED();
 
-    }
-}
-
-bool button_press()
-{
-    if (gpio_get_level(GPIO_INPUT_IO_0))
-    {
-        return TRUE;
-    }
-    else
-    {
-        return FALSE;
-    }
-}
-
-void turn_LED_on()
-{
-    gpio_set_level(GPIO_OUTPUT_IO_0, 1);
-}
-
-void turn_LED_off()
-{
-    gpio_set_level(GPIO_OUTPUT_IO_0, 0);
-}
-
-void blink_LED(blink_count)
-{
-    blink_count = ret_les_ten(blink_count);
-    printf("LED is going to blink \n")
-    printf(blink_count);
-    printf("   times.")
-    for(int i=0;i<blink_count;i++)
-    {
-        turn_LED_off();
-        active_delay();
-        turn_LED_on();
-        active_delay();
-
-    }
-}
-
-int ret_les_ten(int blink_count)
-{
-    blink_count = blink_count % 10;
-    return blink_count;
-}
-
-void active_delay()
-{
-    printf("Waiting ! \n");
-    for(int j=0;j<10000000;j++)
-    {
-        if(j%1000000==0)
-        {
-            printf(".");
-        }
     }
 }
