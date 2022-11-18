@@ -135,8 +135,8 @@ void blink_LED(int blink_count)
 {
     blink_count = ret_les_ten(blink_count);
     printf("LED is going to blink %d times ", blink_count);
-    //const char* status_message = blink_message(blink_count);
-    //printf(status_message);
+    const char* status_message = blink_message(blink_count);
+    printf(status_message);
     for(int i=0;i<blink_count;i++)
     {
 
@@ -175,7 +175,7 @@ void app_main(void)
     io_conf.pull_up_en = 1;
     gpio_config(&io_conf);
 
-    int blink_count=1;
+    int blink_count=6;
 
     while (1) 
     {
