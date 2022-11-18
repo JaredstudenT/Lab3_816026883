@@ -86,67 +86,55 @@ void active_delay()
     }
 }
 
-const *char blink_message(int blink_count)
+const char* blink_message(int blink_count)
 {
     if (blink_count ==0)
     {
-        char *status_message[] = " The LED is going to Blink zero times \n";
-        return status_message ;
+        return " The LED is going to Blink zero times \n";
     }
     else if (blink_count ==1)
     {
-        char *status_message[] = " The LED is going to Blink one time \n";
-        return status_message ;
+        return " The LED is going to Blink one time \n";
     }
     else if (blink_count ==2)
     {
-        char *status_message[] = " The LED is going to Blink two times \n";
-        return status_message ;
+        return " The LED is going to Blink two times \n";
     }
     else if (blink_count ==3)
     {
-        char *status_message[] = " The LED is going to Blink three times \n";
-        return status_message ;
+        return " The LED is going to Blink three times \n";
     }
     else if (blink_count ==4)
     {
-        char *status_message[] = " The LED is going to Blink four times \n";
-        return status_message ;
+        return " The LED is going to Blink four times \n";
     }
     else if (blink_count ==5)
     {
-        char *status_message[] = " The LED is going to Blink five times \n";
-        return status_message ;
+        return " The LED is going to Blink five times \n";
     }
     else if (blink_count ==6)
     {
-        char *status_message[] = " The LED is going to Blink six times \n";
-        return status_message ;
+        return " The LED is going to Blink six times \n";
     }
     else if (blink_count ==7)
     {
-        char *status_message[] = " The LED is going to Blink seven times \n";
-        return status_message ;
+        return " The LED is going to Blink seven times \n";
     }
     else if (blink_count ==8)
     {
-        char *status_message[] = " The LED is going to Blink eight times \n";
-        return status_message ;
+        return " The LED is going to Blink eight times \n";
     }
     else if (blink_count ==9)
     {
-        char *status_message[] = " The LED is going to Blink nine times \n";
-        return status_message ;
+        return " The LED is going to Blink nine times \n";
     }
     else if (blink_count ==10)
     {
-        char *status_message[] = " The LED is going to Blink ten times \n";
-        return status_message ;
+        return " The LED is going to Blink ten times \n";
     }
 
 
-    char *status_message[] = " ERROR " 
-    return status_message ;
+    return  " ERROR \n" ;
 }
 
 void blink_LED(int blink_count)
