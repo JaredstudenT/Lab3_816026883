@@ -51,9 +51,9 @@ bool button_press()
 {
     if (gpio_get_level(GPIO_INPUT_IO_0))
     {
-        return TRUE;
+        return FALSE;
     }
-    return FALSE;
+    return TRUE;
 }
 
 void turn_LED_on()
