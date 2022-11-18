@@ -1,0 +1,16 @@
+Requirements for Project C
+
+System Enables a Button To Interface with the microcontroller
+
+System enables an LED for visual output 
+
+There is a counter that stores an integer value  P. P cannot increase past 10.
+
+-------------------------------------------------
+
+Every time the timer loops, the integer value P is reset to 0 .
+
+Every time the button is pressed, the  value of P is incremented .
+
+WHen the program is running  , the LED is flashed . The LED flashes the
+number of times of the value of P with a delay of 100ms between flashes . 
