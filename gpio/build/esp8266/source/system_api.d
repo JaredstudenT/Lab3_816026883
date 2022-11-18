@@ -1,7 +1,7 @@
 source/system_api.o: \
  /opt/esp_sdk/ESP8266_RTOS_SDK/components/esp8266/source/system_api.c \
  /opt/esp_sdk/ESP8266_RTOS_SDK/components/log/include/esp_log.h \
- /home/jaredmohansingh/Lab1GitFolder/Lab1_Q1_816026883/Q2/gpio/build/include/sdkconfig.h \
+ /home/jaredmohansingh/Lab3GitFolder/Lab3_816026883/gpio/build/include/sdkconfig.h \
  /opt/esp_sdk/ESP8266_RTOS_SDK/components/esp8266/include/rom/ets_sys.h \
  /opt/esp_sdk/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h \
  /opt/esp_sdk/ESP8266_RTOS_SDK/components/esp8266/include/driver/soc.h \
@@ -46,7 +46,7 @@ source/system_api.o: \
 
 /opt/esp_sdk/ESP8266_RTOS_SDK/components/log/include/esp_log.h:
 
-/home/jaredmohansingh/Lab1GitFolder/Lab1_Q1_816026883/Q2/gpio/build/include/sdkconfig.h:
+/home/jaredmohansingh/Lab3GitFolder/Lab3_816026883/gpio/build/include/sdkconfig.h:
 
 /opt/esp_sdk/ESP8266_RTOS_SDK/components/esp8266/include/rom/ets_sys.h:
 

@@ -3,7 +3,7 @@ src/nvs_encrypted_partition.o: \
  /opt/esp_sdk/ESP8266_RTOS_SDK/components/nvs_flash/src/nvs_encrypted_partition.hpp \
  /opt/esp_sdk/ESP8266_RTOS_SDK/components/mbedtls/mbedtls/include/mbedtls/aes.h \
  /opt/esp_sdk/ESP8266_RTOS_SDK/components/mbedtls/port/include/mbedtls/esp_config.h \
- /home/jaredmohansingh/Lab1GitFolder/Lab1_Q1_816026883/Q2/gpio/build/include/sdkconfig.h \
+ /home/jaredmohansingh/Lab3GitFolder/Lab3_816026883/gpio/build/include/sdkconfig.h \
  /opt/esp_sdk/ESP8266_RTOS_SDK/components/mbedtls/mbedtls/include/mbedtls/config.h \
  /opt/esp_sdk/ESP8266_RTOS_SDK/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
  /opt/esp_sdk/ESP8266_RTOS_SDK/components/mbedtls/port/include/esp_mem.h \
@@ -31,7 +31,7 @@ src/nvs_encrypted_partition.o: \
 
 /opt/esp_sdk/ESP8266_RTOS_SDK/components/mbedtls/port/include/mbedtls/esp_config.h:
 
-/home/jaredmohansingh/Lab1GitFolder/Lab1_Q1_816026883/Q2/gpio/build/include/sdkconfig.h:
+/home/jaredmohansingh/Lab3GitFolder/Lab3_816026883/gpio/build/include/sdkconfig.h:
 
 /opt/esp_sdk/ESP8266_RTOS_SDK/components/mbedtls/mbedtls/include/mbedtls/config.h:
 

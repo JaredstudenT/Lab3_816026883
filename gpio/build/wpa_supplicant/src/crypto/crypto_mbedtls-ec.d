@@ -2,7 +2,7 @@ src/crypto/crypto_mbedtls-ec.o: \
  /opt/esp_sdk/ESP8266_RTOS_SDK/components/wpa_supplicant/src/crypto/crypto_mbedtls-ec.c \
  /opt/esp_sdk/ESP8266_RTOS_SDK/components/esp8266/include/esp_system.h \
  /opt/esp_sdk/ESP8266_RTOS_SDK/components/esp_common/include/esp_err.h \
- /home/jaredmohansingh/Lab1GitFolder/Lab1_Q1_816026883/Q2/gpio/build/include/sdkconfig.h \
+ /home/jaredmohansingh/Lab3GitFolder/Lab3_816026883/gpio/build/include/sdkconfig.h \
  /opt/esp_sdk/ESP8266_RTOS_SDK/components/esp8266/include/esp_idf_version.h \
  /opt/esp_sdk/ESP8266_RTOS_SDK/components/mbedtls/mbedtls/include/mbedtls/bignum.h \
  /opt/esp_sdk/ESP8266_RTOS_SDK/components/mbedtls/port/include/mbedtls/esp_config.h \
@@ -63,7 +63,7 @@ src/crypto/crypto_mbedtls-ec.o: \
 
 /opt/esp_sdk/ESP8266_RTOS_SDK/components/esp_common/include/esp_err.h:
 
-/home/jaredmohansingh/Lab1GitFolder/Lab1_Q1_816026883/Q2/gpio/build/include/sdkconfig.h:
+/home/jaredmohansingh/Lab3GitFolder/Lab3_816026883/gpio/build/include/sdkconfig.h:
 
 /opt/esp_sdk/ESP8266_RTOS_SDK/components/esp8266/include/esp_idf_version.h:
 

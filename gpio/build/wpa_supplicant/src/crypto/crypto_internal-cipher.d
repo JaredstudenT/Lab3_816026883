@@ -7,7 +7,7 @@ src/crypto/crypto_internal-cipher.o: \
  /opt/esp_sdk/ESP8266_RTOS_SDK/components/esp8266/include/esp_libc.h \
  /opt/esp_sdk/ESP8266_RTOS_SDK/components/esp8266/include/rom/ets_sys.h \
  /opt/esp_sdk/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h \
- /home/jaredmohansingh/Lab1GitFolder/Lab1_Q1_816026883/Q2/gpio/build/include/sdkconfig.h \
+ /home/jaredmohansingh/Lab3GitFolder/Lab3_816026883/gpio/build/include/sdkconfig.h \
  /opt/esp_sdk/ESP8266_RTOS_SDK/components/esp8266/include/driver/soc.h \
  /opt/esp_sdk/ESP8266_RTOS_SDK/components/heap/include/esp_heap_caps.h \
  /opt/esp_sdk/ESP8266_RTOS_SDK/components/heap/port/esp8266/include/esp_heap_config.h \
@@ -46,7 +46,7 @@ src/crypto/crypto_internal-cipher.o: \
 
 /opt/esp_sdk/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h:
 
-/home/jaredmohansingh/Lab1GitFolder/Lab1_Q1_816026883/Q2/gpio/build/include/sdkconfig.h:
+/home/jaredmohansingh/Lab3GitFolder/Lab3_816026883/gpio/build/include/sdkconfig.h:
 
 /opt/esp_sdk/ESP8266_RTOS_SDK/components/esp8266/include/driver/soc.h:
 
