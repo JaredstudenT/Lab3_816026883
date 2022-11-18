@@ -143,8 +143,8 @@ void blink_LED(int blink_count)
     printf("LED is going to blink \n");
     printf(blink_count);
     printf("   times.");
-    const char* status_message = blink_message(blink_count);
-    printf(status_message);
+    //const char* status_message = blink_message(blink_count);
+    //printf(status_message);
     for(int i=0;i<blink_count;i++)
     {
 
@@ -186,17 +186,18 @@ void app_main(void)
 
     while (1) 
     {
-        if(button_press())
-        {
-            blink_count = blink_count+1;
-        }
+        //if(button_press())
+        //{
+        //    blink_count = blink_count+1;
+        //}
 
-        active_delay();
-        active_delay();
-        active_delay();
-        active_delay();
-        active_delay();
-        blink_LED(blink_count);
+        //active_delay();
+        //active_delay();
+        //active_delay();
+        //active_delay();
+        //active_delay();
+        //blink_LED(blink_count);
+        blink_LED(6);
 
     }
 }
