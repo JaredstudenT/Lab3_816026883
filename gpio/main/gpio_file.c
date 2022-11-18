@@ -77,7 +77,7 @@ int ret_les_ten(int blink_count)
 void active_delay()
 {
     printf("Waiting ! \n");
-    vTaskDelay(1000 / portTICK_RATE_MS);
+    vTaskDelay(100 / portTICK_RATE_MS);
 }
 
 const char* blink_message(int blink_count)
@@ -146,6 +146,7 @@ void blink_LED(int blink_count)
         active_delay();
 
     }
+    vTaskDelay(2000 / portTICK_RATE_MS);
 }
 
 void app_main(void)
@@ -178,18 +179,18 @@ void app_main(void)
 
     while (1) 
     {
-        //if(button_press())
-        //{
-        //    blink_count = blink_count+1;
-        //}
+        if(button_press())
+        {
+            blink_count = blink_count+1;
+        }
 
         //active_delay();
         //active_delay();
         //active_delay();
         //active_delay();
         //active_delay();
-        //blink_LED(blink_count);
-        blink_LED(6);
+        blink_LED(blink_count);
+        //blink_LED(6);
 
     }
 }
