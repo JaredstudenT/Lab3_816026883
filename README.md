@@ -19,6 +19,8 @@ E - In future, the unity test framework could be used to provide further activit
 
 In the integration tests in this system, the two functions that were unit tested . For the integration tests , it inputs a value to the first function and the value returned is used as the input to the next function. 
 
+REFLECTION
+
 R - This required modification from the inital setup that had the first function call nested in the second function. Seperating them did not change the greater functionailty of the system
 I - This was still a fairly straightforward test ,even though there was some modificaton required
 S - Ideally, there should be more functions tested . These two were not the only functions used  in the system .
@@ -31,6 +33,8 @@ The full requirements of this modified project can be found in the file named re
 Since there is a timing requirement, it would be ideal to use some form of equipment that can perform precise time measurements . Something such as as stopwatch would not be appropriate here . An oscilloscope would be useful to measure the time that the pin is eitehr HIGH or LOW . Also , slow motion camera combined with some software to slow down the frames and analyse the time elapsed may also be useful .
 Even if the video is not used for precius timing prupsoes, it can still be used to count the flashes of the LED which many be difficult to see , for some people .
 If there were other requirements relating to analog/digital waveforms and signal intensities, other equipment may need to be used .
+
+REFLECTION
 
 R - This was a much more complicated test as the system needed to run as normal and the requirements to be validated outside of the code . In the end, the button system did not work adn thus the system was not verified .
 I - Initially, I was unusre as to what was causing the failures, but by crossreferencing the failure with the unit tests, I realised that the button was not configured properly . I used my DMM to check the voltage on the pin when the button was pressed and not pressed  (Pressed =3.3 V, Not pressed 2.3 V). This led to me to believe that there was some error in the setup/ configutation of the pin that the button was connected to.
