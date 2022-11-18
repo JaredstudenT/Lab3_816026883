@@ -175,7 +175,7 @@ void app_main(void)
     io_conf.pull_up_en = 1;
     gpio_config(&io_conf);
 
-    int blink_count=0;
+    int blink_count=1;
 
     while (1) 
     {
