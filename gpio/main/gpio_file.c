@@ -86,14 +86,80 @@ void active_delay()
     }
 }
 
-void blink_LED(blink_count)
+const *char blink_message(int blink_count)
+{
+    if (blink_count ==0)
+    {
+        char *status_message[] = " The LED is going to Blink zero times \n";
+        return status_message ;
+    }
+    else if (blink_count ==1)
+    {
+        char *status_message[] = " The LED is going to Blink one time \n";
+        return status_message ;
+    }
+    else if (blink_count ==2)
+    {
+        char *status_message[] = " The LED is going to Blink two times \n";
+        return status_message ;
+    }
+    else if (blink_count ==3)
+    {
+        char *status_message[] = " The LED is going to Blink three times \n";
+        return status_message ;
+    }
+    else if (blink_count ==4)
+    {
+        char *status_message[] = " The LED is going to Blink four times \n";
+        return status_message ;
+    }
+    else if (blink_count ==5)
+    {
+        char *status_message[] = " The LED is going to Blink five times \n";
+        return status_message ;
+    }
+    else if (blink_count ==6)
+    {
+        char *status_message[] = " The LED is going to Blink six times \n";
+        return status_message ;
+    }
+    else if (blink_count ==7)
+    {
+        char *status_message[] = " The LED is going to Blink seven times \n";
+        return status_message ;
+    }
+    else if (blink_count ==8)
+    {
+        char *status_message[] = " The LED is going to Blink eight times \n";
+        return status_message ;
+    }
+    else if (blink_count ==9)
+    {
+        char *status_message[] = " The LED is going to Blink nine times \n";
+        return status_message ;
+    }
+    else if (blink_count ==10)
+    {
+        char *status_message[] = " The LED is going to Blink ten times \n";
+        return status_message ;
+    }
+
+
+    char *status_message[] = " ERROR " 
+    return status_message ;
+}
+
+void blink_LED(int blink_count)
 {
     blink_count = ret_les_ten(blink_count);
     printf("LED is going to blink \n");
     printf(blink_count);
     printf("   times.");
+    const char* status_message = blink_message(blink_count);
+    printf(status_message);
     for(int i=0;i<blink_count;i++)
     {
+
         turn_LED_off();
         active_delay();
         turn_LED_on();
@@ -136,6 +202,7 @@ void app_main(void)
         {
             blink_count = blink_count+1;
         }
+
         active_delay();
         active_delay();
         active_delay();
