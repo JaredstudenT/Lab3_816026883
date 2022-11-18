@@ -54,7 +54,6 @@ bool button_press()
         return TRUE;
     }
     return FALSE;
-    
 }
 
 void turn_LED_on()
@@ -129,16 +128,20 @@ void app_main(void)
     io_conf.pull_up_en = 1;
     gpio_config(&io_conf);
 
-    int blink_count;
+    int blink_count=0;
 
     while (1) 
     {
-        if(button_press)
+        if(button_press())
         {
-            blink_count = blink_count+1
+            blink_count = blink_count+1;
         }
-
-        blink_LED();
+        active_delay();
+        active_delay();
+        active_delay();
+        active_delay();
+        active_delay();
+        blink_LED(blink_count);
 
     }
 }
