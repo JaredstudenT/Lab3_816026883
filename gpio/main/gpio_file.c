@@ -140,9 +140,7 @@ const char* blink_message(int blink_count)
 void blink_LED(int blink_count)
 {
     blink_count = ret_les_ten(blink_count);
-    printf("LED is going to blink \n");
-    printf(blink_count);
-    printf("   times.");
+    printf("LED is going to blink %d times ", blink_count);
     //const char* status_message = blink_message(blink_count);
     //printf(status_message);
     for(int i=0;i<blink_count;i++)
