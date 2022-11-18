@@ -77,13 +77,7 @@ int ret_les_ten(int blink_count)
 void active_delay()
 {
     printf("Waiting ! \n");
-    for(int j=0;j<10000000;j++)
-    {
-        if(j%1000000==0)
-        {
-            printf(".");
-        }
-    }
+    vTaskDelay(1000 / portTICK_RATE_MS);
 }
 
 const char* blink_message(int blink_count)
