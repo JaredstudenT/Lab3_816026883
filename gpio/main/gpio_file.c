@@ -177,20 +177,38 @@ void app_main(void)
 
     int blink_count=6;
 
-    while (1) 
+
+    const char* test_message;
+    int test_parameter ;
+    int test_intermediate ;
+    //////////////////////Integration Test 1///////////////////////////
+    test_parameter = 17;
+    test_intermediate = ret_les_ten(test_parameter);
+    test_message = blink_message(test_intermediate);
+    if(test_message == " The LED is going to Blink seven times \n")
     {
-        if(button_press())
-        {
-            blink_count = blink_count+1;
-        }
-
-        //active_delay();
-        //active_delay();
-        //active_delay();
-        //active_delay();
-        //active_delay();
-        blink_LED(blink_count);
-        //blink_LED(6);
-
+        print("Expected ' The LED is going to Blink seven times \n', got %d. TEST PASSED \n", test_message);
     }
+    else
+    {
+        print("Expected ' The LED is going to Blink seven times \n', got %d. TEST FAILED \n", test_message);
+    }
+
+
+    //////////////////////Integration Test 1///////////////////////////
+
+
+    //////////////////////Integration Test 2///////////////////////////
+    test_parameter = 6;
+    test_intermediate = ret_les_ten(test_parameter);
+    test_message = blink_message(test_intermediate);
+    if(test_message == " The LED is going to Blink seven times \n")
+    {
+        print("Expected ' The LED is going to Blink six times \n', got %d. TEST PASSED \n", test_message);
+    }
+    else
+    {
+        print("Expected ' The LED is going to Blink six times \n', got %d. TEST FAILED \n", test_message);
+    }
+    //////////////////////Integration Test 2///////////////////////////
 }
