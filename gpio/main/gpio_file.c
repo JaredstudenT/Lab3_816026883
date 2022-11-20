@@ -215,7 +215,7 @@ void app_main(void)
     //////////////////////UNIT TEST 2.1////////////////////////
     //testing function blink_message
     const char* test_message;
-    test_parameter=4;
+    test_parameter=21;
     test_message = blink_count(test_parameter);
     if(test_message == " ERROR \n")
     {
@@ -230,7 +230,7 @@ void app_main(void)
 
     //////////////////////UNIT TEST 2.2////////////////////////
     //testing function blink_message
-    test_parameter  = 21;
+    test_parameter  = 7;
     test_message = blink_count(test_parameter);
     
     if(test_message == " The LED is going to Blink seven times \n")
