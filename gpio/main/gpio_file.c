@@ -133,7 +133,7 @@ const char* blink_message(int blink_count)
 
 void blink_LED(int blink_count)
 {
-    blink_count = ret_les_ten(blink_count);
+    
     printf("LED is going to blink %d times ", blink_count);
     const char* status_message = blink_message(blink_count);
     printf(status_message);
@@ -175,22 +175,71 @@ void app_main(void)
     io_conf.pull_up_en = 1;
     gpio_config(&io_conf);
 
-    int blink_count=6;
+    int blink_count ;
+    int click_count=6;
 
-    while (1) 
+    int test_parameter=16;
+    int test_result =0;
+
+    //////////////////////UNIT TEST 1.1////////////////////////
+    //testing the function ret_les_ten
+
+    test_result = ret_les_ten(test_parameter);
+    if(test_result==6)
     {
-        if(button_press())
-        {
-            blink_count = blink_count+1;
-        }
-
-        //active_delay();
-        //active_delay();
-        //active_delay();
-        //active_delay();
-        //active_delay();
-        blink_LED(blink_count);
-        //blink_LED(6);
-
+        print("Expected 6, got %d. TEST PASSED\n", test_result);
     }
+    else
+    {
+        print("Expected 6, got %d. TEST FAILED\n", test_result);
+    }
+    //////////////////////UNIT TEST 1.1////////////////////////
+
+
+    //////////////////////UNIT TEST 1.2////////////////////////
+    //testing the function ret_les_ten  
+    test_parameter=4;
+
+    test_result = ret_les_ten(test_parameter);
+    if(test_result==4)
+    {
+        print("Expected 4, got %d. TEST PASSED\n", test_result);
+    }
+    else
+    {
+        print("Expected 4, got %d. TEST FAILED\n", test_result);
+    }
+    //////////////////////UNIT TEST 1.2////////////////////////
+
+
+    //////////////////////UNIT TEST 2.1////////////////////////
+    //testing function blink_message
+    const char* test_message;
+    test_parameter=4;
+    test_message = blink_count(test_parameter);
+    if(test_message == " ERROR \n")
+    {
+        print("Expected ' ERROR \n', got %d. TEST PASSED \n", test_message);
+    }
+    else
+    {
+        print("Expected ' ERROR \n', got %d. TEST FAILED \n", test_message);
+    }
+    //////////////////////UNIT TEST 2.1////////////////////////
+
+
+    //////////////////////UNIT TEST 2.2////////////////////////
+    //testing function blink_message
+    test_parameter  = 21;
+    test_message = blink_count(test_parameter);
+    
+    if(test_message == " The LED is going to Blink seven times \n")
+    {
+        print("Expected ' The LED is going to Blink seven times \n', got %d. TEST PASSED \n", test_message);
+    }
+    else
+    {
+        print("Expected ' The LED is going to Blink seven times \n', got %d. TEST FAILED \n", test_message);
+    }
+    //////////////////////UNIT TEST 2.2////////////////////////
 }
