@@ -176,6 +176,7 @@ void app_main(void)
     gpio_config(&io_conf);
 
     int blink_count=6;
+    //The blink count starts at 6 instead of zero since the button counter doesnt work
 
     while (1) 
     {
@@ -184,13 +185,9 @@ void app_main(void)
             blink_count = blink_count+1;
         }
 
-        //active_delay();
-        //active_delay();
-        //active_delay();
-        //active_delay();
-        //active_delay();
+        
         blink_LED(blink_count);
-        //blink_LED(6);
+        
 
     }
 }
