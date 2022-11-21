@@ -1,1 +1,1 @@
-c5412dc gpio v3.4-49-g0f200b46-dirty
+e0e799a-dirty gpio v3.4-49-g0f200b46-dirty
