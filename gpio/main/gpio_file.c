@@ -215,9 +215,11 @@ void app_main(void)
     //////////////////////UNIT TEST 2.1////////////////////////
     //testing function blink_message
     const char* test_message;
+    char answer_message[] = " ERROR \n";
     test_parameter=21;
     test_message = blink_count(test_parameter);
-    if(test_message == " ERROR \n")
+   
+    if( strcmp(answer_message, test_message) == 0)
     {
         print("Expected ' ERROR \n', got %d. TEST PASSED \n", test_message);
     }
@@ -231,9 +233,10 @@ void app_main(void)
     //////////////////////UNIT TEST 2.2////////////////////////
     //testing function blink_message
     test_parameter  = 7;
+    answer_message[] = " The LED is going to Blink seven times \n";
     test_message = blink_count(test_parameter);
     
-    if(test_message == " The LED is going to Blink seven times \n")
+    if( strcmp(answer_message, test_message) == 0)
     {
         print("Expected ' The LED is going to Blink seven times \n', got %d. TEST PASSED \n", test_message);
     }
