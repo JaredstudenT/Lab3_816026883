@@ -179,36 +179,39 @@ void app_main(void)
 
 
     const char* test_message;
+    char answer_message[] = " The LED is going to Blink seven times \n";	
     int test_parameter ;
     int test_intermediate ;
     //////////////////////Integration Test 1///////////////////////////
     test_parameter = 17;
     test_intermediate = ret_les_ten(test_parameter);
     test_message = blink_message(test_intermediate);
-    if(test_message == " The LED is going to Blink seven times \n")
+    if( (strcmp(test_message,answer_message))==0)
     {
-        print("Expected ' The LED is going to Blink seven times \n', got %d. TEST PASSED \n", test_message);
+        printf("Expected ' The LED is going to Blink seven times \n', got %s. TEST PASSED \n", test_message);
     }
     else
     {
-        print("Expected ' The LED is going to Blink seven times \n', got %d. TEST FAILED \n", test_message);
+        printf("Expected ' The LED is going to Blink seven times \n', got %s. TEST FAILED \n", test_message);
     }
-
+  
 
     //////////////////////Integration Test 1///////////////////////////
 
 
     //////////////////////Integration Test 2///////////////////////////
     test_parameter = 6;
+	char answer_too_message[] =  " The LED is going to Blink six times \n";
     test_intermediate = ret_les_ten(test_parameter);
     test_message = blink_message(test_intermediate);
-    if(test_message == " The LED is going to Blink seven times \n")
+
+    if( strcmp(answer_too_message,test_message)==0)
     {
-        print("Expected ' The LED is going to Blink six times \n', got %d. TEST PASSED \n", test_message);
+        printf("Expected ' The LED is going to Blink six times \n', got %s. TEST PASSED \n", test_message);
     }
     else
     {
-        print("Expected ' The LED is going to Blink six times \n', got %d. TEST FAILED \n", test_message);
+        printf("Expected ' The LED is going to Blink six times \n', got %s. TEST FAILED \n", test_message);
     }
     //////////////////////Integration Test 2///////////////////////////
 }
