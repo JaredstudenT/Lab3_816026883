@@ -187,11 +187,11 @@ void app_main(void)
     test_result = ret_les_ten(test_parameter);
     if(test_result==6)
     {
-        print("Expected 6, got %d. TEST PASSED\n", test_result);
+        printf("Expected 6, got %d. TEST PASSED\n", test_result);
     }
     else
     {
-        print("Expected 6, got %d. TEST FAILED\n", test_result);
+        printf("Expected 6, got %d. TEST FAILED\n", test_result);
     }
     //////////////////////UNIT TEST 1.1////////////////////////
 
@@ -203,11 +203,11 @@ void app_main(void)
     test_result = ret_les_ten(test_parameter);
     if(test_result==4)
     {
-        print("Expected 4, got %d. TEST PASSED\n", test_result);
+        printf("Expected 4, got %d. TEST PASSED\n", test_result);
     }
     else
     {
-        print("Expected 4, got %d. TEST FAILED\n", test_result);
+        printf("Expected 4, got %d. TEST FAILED\n", test_result);
     }
     //////////////////////UNIT TEST 1.2////////////////////////
 
@@ -217,15 +217,15 @@ void app_main(void)
     const char* test_message;
     char answer_message[] = " ERROR \n";
     test_parameter=21;
-    test_message = blink_count(test_parameter);
+    test_message = blink_message(test_parameter);
    
     if( strcmp(answer_message, test_message) == 0)
     {
-        print("Expected ' ERROR \n', got %d. TEST PASSED \n", test_message);
+        printf("Expected ' ERROR \n', got %d. TEST PASSED \n", test_message);
     }
     else
     {
-        print("Expected ' ERROR \n', got %d. TEST FAILED \n", test_message);
+        printf("Expected ' ERROR \n', got %d. TEST FAILED \n", test_message);
     }
     //////////////////////UNIT TEST 2.1////////////////////////
 
@@ -234,15 +234,15 @@ void app_main(void)
     //testing function blink_message
     test_parameter  = 7;
     answer_message[] = " The LED is going to Blink seven times \n";
-    test_message = blink_count(test_parameter);
+    test_message = blink_message(test_parameter);
     
     if( strcmp(answer_message, test_message) == 0)
     {
-        print("Expected ' The LED is going to Blink seven times \n', got %d. TEST PASSED \n", test_message);
+        printf("Expected ' The LED is going to Blink seven times \n', got %d. TEST PASSED \n", test_message);
     }
     else
     {
-        print("Expected ' The LED is going to Blink seven times \n', got %d. TEST FAILED \n", test_message);
+        printf("Expected ' The LED is going to Blink seven times \n', got %d. TEST FAILED \n", test_message);
     }
     //////////////////////UNIT TEST 2.2////////////////////////
 }
