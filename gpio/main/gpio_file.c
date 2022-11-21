@@ -1,3 +1,4 @@
+
 /* gpio example
    This example code is in the Public Domain (or CC0 licensed, at your option.)
    Unless required by applicable law or agreed to in writing, this
@@ -221,11 +222,11 @@ void app_main(void)
    
     if( strcmp(answer_message, test_message) == 0)
     {
-        printf("Expected ' ERROR \n', got %d. TEST PASSED \n", test_message);
+        printf("Expected ' ERROR \n', got %s. TEST PASSED \n", test_message);
     }
     else
     {
-        printf("Expected ' ERROR \n', got %d. TEST FAILED \n", test_message);
+        printf("Expected ' ERROR \n', got %s. TEST FAILED \n", test_message);
     }
     //////////////////////UNIT TEST 2.1////////////////////////
 
@@ -233,16 +234,16 @@ void app_main(void)
     //////////////////////UNIT TEST 2.2////////////////////////
     //testing function blink_message
     test_parameter  = 7;
-    answer_message[] = " The LED is going to Blink seven times \n";
+    char answer_too_message[]  = " The LED is going to Blink seven times \n";
     test_message = blink_message(test_parameter);
     
     if( strcmp(answer_message, test_message) == 0)
     {
-        printf("Expected ' The LED is going to Blink seven times \n', got %d. TEST PASSED \n", test_message);
+        printf("Expected ' The LED is going to Blink seven times \n', got %s. TEST PASSED \n", test_message);
     }
     else
     {
-        printf("Expected ' The LED is going to Blink seven times \n', got %d. TEST FAILED \n", test_message);
+        printf("Expected ' The LED is going to Blink seven times \n', got %s. TEST FAILED \n", test_message);
     }
     //////////////////////UNIT TEST 2.2////////////////////////
 }
